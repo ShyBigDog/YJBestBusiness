@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--日程-->
+        <scene sceneID="idv-f3-kaT">
+            <objects>
+                <navigationController storyboardIdentifier="schedule" id="y5o-4q-9dc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="日程" id="81r-NE-CLh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3xA-Xf-8IA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UdO-S8-y22" kind="relationship" relationship="rootViewController" id="qE0-5U-Cgu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y27-1q-yUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="125"/>
+        </scene>
+        <!--日程-->
+        <scene sceneID="5h4-fC-kYU">
+            <objects>
+                <viewController id="UdO-S8-y22" customClass="ScheduleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yBQ-k1-Fj7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vtZ-zC-7fi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6B-wV-mx5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="日程" id="8ir-j8-sqf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlJ-QI-NiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="125"/>
+        </scene>
+    </scenes>
+</document>

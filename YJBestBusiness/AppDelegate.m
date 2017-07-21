@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+#import "LoginViewController.h"
+#import "AppDelegate+First.h"
+#import "AppConfig.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //[self isAppFirstClose];
+    
+     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    if ([UserInfoManage sharedInstance].isLogin == YES) {
+        LoginViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"login"];
+        self.window.rootViewController = vc;
+    }
+    else
+    {
+        MainTabBarController *vc = (MainTabBarController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+        self.window.rootViewController = vc;
+    }
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
